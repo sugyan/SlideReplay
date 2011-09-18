@@ -1,0 +1,16 @@
+h2 Recent Slides
+div(id="results")
+  - each slide in slides
+    div(class="result")
+      a(href="/play/#{slide._id}")
+        img(src="#{slide.ThumbnailURL}")
+      div(class="info")
+        div(class="title") #{slide.Title}
+        div(class="user") #{slide.Username}
+        div #{slide.NumSlides} slides
+        div &nbsp;
+        div
+          div registered by #{slide.registered_by}
+          div(class="datetime") #{slide.created_at}
+h2
+  a(href="/new") Register new slide

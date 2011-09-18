@@ -1,0 +1,35 @@
+h2 edit
+script(type="text/javascript")
+  var flashvars = { doc : "#{PPTLocation}" };
+  var replay = #{replay};
+script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js")
+script(type="text/javascript", src="/javascripts/edit.js")
+div(id="left")
+  div(id="player") You need Flash player 8+ and JavaScript to view the slideshow player.
+  dl
+    dt Title:
+    dd
+      a(href="#{URL}", target="_blank") #{Title}
+    dt Description:
+    dd=Description
+    dt User:
+    dd
+      a(href="http://www.slideshare.net/#{Username}", target="_blank") #{Username}
+    dt Created:
+    dd=Created
+div(id="right")
+  form(method="POST", action="/edit/#{_id}")
+    - JSON.parse(replay).forEach(function (e, i) {
+      div(class="item")
+        div(class="subject") slide ##{i + 1}:
+        select(name="#{i}", value="#{e}")
+          - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30].forEach(function (j) {
+            - if (j === e)
+              option(value="#{j}", selected=true) #{j}
+            - else
+              option(value="#{j}") #{j}
+          - });
+        span seconds
+          span(class="total") (total: )
+    - })
+    input(type="submit", value="save")

@@ -1,0 +1,122 @@
+body {
+    padding: 30px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+div#header {
+    height: 50px;
+    margin: 10px 0;
+}
+div#header h1 {
+    float: left;
+    margin: 0;
+}
+div#header h1 a {
+    color: navy;
+    text-decoration: none;
+}
+div#header div#signin {
+    float: right;
+}
+
+iframe#vote {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#results div.result {
+    padding: 3px;
+    height: 130px;
+    overflow: hidden;
+    border-top: 1px solid;
+}
+#results img {
+    float: left;
+}
+#results .info {
+    margin-top: 10px;
+    margin-left: 180px;
+}
+#results .info .datetime {
+    font-size: small;
+    color: gray;
+}
+
+div#timer {
+    width: 589px;
+    text-align: center;
+    font-size: x-large;
+}
+
+div#left {
+    width: 450px;
+    float: left;
+}
+div#right {
+    margin-left: 480px;
+}
+div.item div.subject {
+    float: left;
+    width: 80px;
+}
+div.item select {
+    margin-left: 90px;
+}
+
+div#w_left {
+    width: 620px;
+    float: left;
+}
+div#w_right {
+    margin-left: 630px;
+    width: 350px;
+}
+div#connections {
+    margin: 5px 0;
+}
+span#total {
+    color: red;
+    margin-left: 5px;
+}
+span#room {
+    color: blue;
+    margin-left: 5px;
+}
+input#message {
+    width: 250px;
+}
+
+div#frame {
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+div.overlay {
+    position: absolute;
+    width: 600px;
+    font-weight: bold;
+    font-size: large;
+}
+div#messages {
+    margin-top: 10px;
+    width: 350px;
+    white-space: nowrap;
+}
+div.message {
+    height: 20px;
+}
+div.message span.timer {
+    float: left;
+    width: 40px;
+    font-size: small;
+    text-align: right;
+    color: gray;
+}
+div.message span.body {
+    margin-left: 10px;
+}

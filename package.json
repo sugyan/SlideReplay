@@ -1,0 +1,23 @@
+{
+    "author": "sugyan <sugi1982+git@gmail.com> (http://sugyan.com/)",
+    "name": "nko2011",
+    "description": "node knockout 2011",
+    "version": "0.0.1",
+    "repository": {
+        "url": "https://github.com/sugyan/SlideReplay"
+    },
+    "engines": {
+        "node": "~v0.4.11"
+    },
+    "dependencies": {
+        "express": ">=2.4.6",
+        "jade": ">=0.15.2",
+        "qs": ">=0.3.1",
+        "underscore": ">=1.1.7",
+        "xml2json": ">=0.2.3",
+        "mongodb": ">=0.9.6",
+        "oauth": ">=0.9.5",
+        "connect-mongodb": ">=1.0.0",
+        "socket.io": ">=0.7.11"
+    }
+}

@@ -1,0 +1,20 @@
+h2 #{Title}
+script(type="text/javascript")
+  var flashvars = { doc : "#{PPTLocation}" };
+  var replay = #{replay};
+script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js")
+script(type="text/javascript", src="/javascripts/play.js")
+div(id="w_left")
+  div(id="frame")
+    div(id="player") You need Flash player 8+ and JavaScript to view the slideshow player.
+  div(id="timer")
+  div(id="progressbar")
+div(id="w_right")
+  div(id="connections") connections:
+    span(id="room")
+    span(id="total")
+  div
+    form(id="form_message")
+      input(type="text", id="message", name="message")
+      input(type="submit", value="send")
+    div(id="messages")

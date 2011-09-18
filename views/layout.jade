@@ -1,0 +1,24 @@
+!!!
+html
+  head
+    title SlideReplay
+    link(rel="shortcut icon", href="/images/favicon.ico")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/stylesheets/jquery-ui-1.8.16.custom.css")
+    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
+    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js")
+    script(type="text/javascript", src="/socket.io/socket.io.js")
+  body
+    div(id="header")
+      h1
+        a(href="/") SlideReplay
+      iframe(id="vote", src="http://nodeknockout.com/iframe/sugyan", frameborder=0, scrolling="no", allowtransparency=true, width=115, height=25)
+      div(id="signin")
+        - if (session.user)
+          span hi, #{session.user.name}
+          span
+            img(src="#{session.user.image}", height="20", width="20")
+          a(href="/signout") signout
+        - else
+          a(href="/signin/github") signin #{session.user}
+    div(id="content")!= body

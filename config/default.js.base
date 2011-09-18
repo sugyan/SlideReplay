@@ -1,0 +1,24 @@
+module.exports = {
+    http: {
+        cookie_secret: '***********'
+    },
+    slideshare: {
+        key: '********',
+        secret: '********'
+    },
+    mongo: {
+        dbname: '***********',
+        host: '*****.*******.***',
+        port: *****,
+        authenticate: {
+            username: '******',
+            password: '************'
+        }
+    },
+    oauth: {
+        github: {
+            client: '********************',
+            secret: '****************************************'
+        }
+    }
+};
